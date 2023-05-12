@@ -4,20 +4,22 @@
 
 //$ Accedere agli elementi
 
-/* console.log(cities);
-
+/*
+console.log(cities);
 console.log(cities[0]); //Milano
-
+console.log(cities.length-1)// 4
+console.log(cities.length)// 3
+console.log(cities[cities.length]); //undefined
 console.log(cities[cities.length-1]); //Napoli
-
 console.log(cities[4]); //undefined
+console.log(cities[3]); //Napoli
 
-console.log(cities[3]); //Napoli */
-
+ */
 
 //$ Operazioni sugli elementi
 
-/* for (let i = 0; i < cities.length; i++) {
+/*
+for (let i = 0; i < cities.length; i++) {
     console.log(cities[i]);
 }
  */
@@ -25,7 +27,8 @@ console.log(cities[3]); //Napoli */
 //% Altre tipologie di Array in JavaScript
 
 //$ Array Bidimensionali
-/* const classi = [
+/*
+const classi = [
     [1, 2, 3],
     ["Paolo", "Mirko", "Anna"]
 ]
@@ -34,17 +37,11 @@ console.log(classi)
 
 console.log(classi[0])
 
-console.log(classi[1][2]) //Anna */
+console.log(classi[1][2]) //Anna
+ */
 
-//$ Array Bidimensionali
-/* const premi = [
-    posizioni = [1, 2, 3],
-    classificati = ["Paolo", "Mirko", "Anna"]
-]
-console.log(premi.posizioni) */
 
 //$ Array di oggetti
-
 /* let people = [
     {
         name: "Paolo",
@@ -100,9 +97,47 @@ console.log(greaterThanTwo); //true
 
 //% Oggetti
 
-/* let house = {
-    address: "32 Boulevard st.",
+
+//$ Approfondimenti
+
+
+
+//* Conversione chiave in stringa
+/*
+let object = {
+    "key" : "key",
+}
+console.log(object.key); // key
+ */
+
+//* Proprietà dinamiche
+/*
+const name = "non saprei";
+let object = {
+    [name] : "Edoardo"
+}
+console.log(object[name]); // Edoardo
+console.log(name); // non saprei
+*/
+
+//* Nome chiave e valore uguali
+
+let age = 30;
+let object = {
+    name : "name",
+    age
+}
+console.log(object.age); //30
+
+
+
+
+//$ Operazioni in un oggetto
+
+/*
+let house = {
     mq: 132,
+    "address": "32 Boulevard st.",
     garden: false,
     rooms: ["kitchen", "bathroom", "bedroom", "small bedroom", "hallway"],
     roommates: [
@@ -115,10 +150,11 @@ console.log(greaterThanTwo); //true
         age: 40
         },
     ],
-} */
-
+}
+ */
 //$ Accedere agli oggetti
 //console.log(house.mq); // 132
+//console.log(house.rooms[3]); //small bedroom
 
 //$ Accedere agli oggetti innestati
 //console.log(house.roommates[1].age); // 40
@@ -129,16 +165,25 @@ console.log(greaterThanTwo); //true
 
 //$ Aggiungere proprietà fuori dall'oggetto
 //house.color = "blue";
-//console.log(house);
+//console.log(house.color);
 
 //$ Sovrascrivere proprietà fuori dall'oggetto
-/* house.garden = true;
-console.log(house.garden); // true */
+/*
+console.log(house.garden); // false
+house.garden = true;
+console.log(house.garden); // true
+ */
 
 //$ Eliminare proprietà dall'oggetto
-/* delete house.roommates;
+/*
+console.log(house);
+delete house.roommates;
 delete house.rooms;
-console.log(house); */
+console.log(house);
+*/
+
+/* delete house;
+console.log(house.address); */
 
 //$ Accedere alle proprietà di un oggetto
 /*
@@ -147,10 +192,17 @@ let user = {
     10: "Ciao",
     "not my age": 20,
 }
+
+//console.log(user.10); //Ciao
+console.log(user[10]); //Ciao
+console.log(user[2*5]); //Ciao
+console.log(user[100/10]); //Ciao
+//console.log(user.not my age); //20
 console.log(user["not my age"]); //20
 
 let saluta = "name";
 console.log(user.saluta);//undefined
 console.log(user[saluta]);//John
 console.log(user["name"]);//John
-*/
+
+ */

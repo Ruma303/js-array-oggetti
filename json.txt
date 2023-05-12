@@ -1,0 +1,12 @@
+{
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "eta": 30,
+    "indirizzo": {
+        "via": "Via Roma",
+        "citta": "Milano",
+        "provincia": "MI",
+        "cap": "20121"
+    },
+    "hobbies": ["cinema", "musica", "viaggi"]
+}
